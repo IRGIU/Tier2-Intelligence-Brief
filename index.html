@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muslim Community Risk Assessment: Populism and Policy Threats in the UK</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .back-to-toc {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-toc:hover {
+            opacity: 1;
+            transform: translateX(-3px);
+        }
+
+        .back-to-toc svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            min-height: 100vh;
+        }
+
+        .header {
+            border-left: 3px solid #fff;
+            padding-left: 20px;
+            margin-bottom: 60px;
+            animation: slideIn 0.8s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .org-name {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 10px;
+        }
+
+        .doc-type {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.5;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            max-width: 800px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.6;
+            letter-spacing: 1px;
+        }
+
+        .section-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 12px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .nav-btn.active {
+            background: #fff;
+            color: #000;
+            border-color: #fff;
+            font-weight: 600;
+        }
+
+        .section-content {
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .section-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 300;
+            margin-bottom: 25px;
+            margin-top: 40px;
+            letter-spacing: -0.5px;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: 400;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        h4 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            opacity: 0.8;
+        }
+
+        p {
+            margin-bottom: 20px;
+            opacity: 0.85;
+            font-size: 16px;
+        }
+
+        .key-judgments {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid #fff;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .key-judgments h3 {
+            margin-top: 0;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 25px;
+            opacity: 0.85;
+        }
+
+        li {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        strong {
+            font-weight: 600;
+            opacity: 1;
+        }
+
+        .risk-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+            font-size: 14px;
+        }
+
+        .risk-table th {
+            background: #fff;
+            color: #000;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #000;
+        }
+
+        .risk-table td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.85;
+        }
+
+        .risk-table tr:hover td {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .risk-high {
+            color: #ff4444;
+            font-weight: 600;
+        }
+
+        .risk-medium {
+            color: #ffaa00;
+            font-weight: 600;
+        }
+
+        .risk-low {
+            color: #44ff44;
+            font-weight: 600;
+        }
+
+        .scenario-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid rgba(255, 255, 255, 0.3);
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .scenario-box h4 {
+            margin-top: 0;
+        }
+
+        .probability {
+            display: inline-block;
+            background: #fff;
+            color: #000;
+            padding: 4px 12px;
+            border-radius: 3px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .recommendations {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid #fff;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .recommendations h3 {
+            margin-top: 0;
+        }
+
+        .dashboard {
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .indicator {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid transparent;
+        }
+
+        .indicator.red {
+            border-left-color: #ff4444;
+        }
+
+        .indicator.amber {
+            border-left-color: #ffaa00;
+        }
+
+        .indicator.green {
+            border-left-color: #44ff44;
+        }
+
+        .indicator-label {
+            flex: 1;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .indicator-status {
+            padding: 6px 16px;
+            border-radius: 3px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .status-red {
+            background: #ff4444;
+            color: #000;
+        }
+
+        .status-amber {
+            background: #ffaa00;
+            color: #000;
+        }
+
+        .status-green {
+            background: #44ff44;
+            color: #000;
+        }
+
+        .pullquote {
+            font-size: 22px;
+            line-height: 1.6;
+            font-weight: 300;
+            font-style: italic;
+            margin: 50px 0;
+            padding-left: 30px;
+            border-left: 3px solid #fff;
+            opacity: 0.9;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: #fff;
+            color: #000;
+            border: none;
+            border-radius: 0;
+            font-size: 24px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            background: #000;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            .scroll-to-top {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://irgiu.github.io/Contents-Page/" class="back-to-toc">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M16 10H4M4 10L10 16M4 10L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Back to Contents</span>
+        </a>
+
+        <div class="header">
+            <div class="org-name">CANVI / IRGIU</div>
+            <div class="doc-type">Intelligence Brief</div>
+            <h1>Muslim Community Risk Assessment:<br>Populism and Policy Threats in the UK</h1>
+            <div class="subtitle">Tier 2 Analysis</div>
+        </div>
+
+        <nav class="section-nav">
+            <button class="nav-btn active" data-section="summary">Summary & Key Judgments</button>
+            <button class="nav-btn" data-section="background">Background</button>
+            <button class="nav-btn" data-section="policy">Policy Threats</button>
+            <button class="nav-btn" data-section="climate">Community Climate</button>
+            <button class="nav-btn" data-section="economic">Economic & Workforce</button>
+            <button class="nav-btn" data-section="security">Security Dimension</button>
+            <button class="nav-btn" data-section="heatmap">Risk Heat Map</button>
+            <button class="nav-btn" data-section="indicators">Early-Warning Indicators</button>
+            <button class="nav-btn" data-section="scenarios">Scenario Analysis</button>
+            <button class="nav-btn" data-section="recommendations">Recommendations</button>
+            <button class="nav-btn" data-section="annex">RAG Dashboard</button>
+        </nav>
+
+        <!-- SECTION 1: SUMMARY -->
+        <div class="section-content active" id="summary">
+            <h2>Section 1 – Summary & Key Judgments</h2>
+            
+            <h3>Summary</h3>
+            <p>The rise of right-wing populism in the United Kingdom is reshaping the lived realities of Muslim communities. Muslims are increasingly placed at the intersection of debates on immigration, national identity, and loyalty. Policy proposals around Indefinite Leave to Remain (ILR), citizenship conditionality, and expanded counter-extremism powers introduce heightened uncertainty for a community that contributes significantly to the UK's workforce and civic life. Social polarisation is amplifying hate incidents, and contradictions in elite rhetoric (celebrating Muslim success while questioning Muslim institutions) further entrench insecurity.</p>
+
+            <div class="key-judgments">
+                <h3>Key Judgments</h3>
+                <ol>
+                    <li><strong>Legal & Policy Risk:</strong> Reforms to ILR and loyalty tests are credible near-term threats that could undermine citizenship predictability for long-settled Muslim families.</li>
+                    <li><strong>Social Climate:</strong> Hate incidents will continue to correlate with populist mobilisation cycles (e.g., protests, rallies, media surges). Muslim women remain disproportionately targeted.</li>
+                    <li><strong>Contradictory Narratives:</strong> Elite inclusion of high-profile Muslim leaders coexists with deep suspicion of grassroots Muslim organisations, creating a two-track discourse.</li>
+                    <li><strong>Community Strategies:</strong> Muslim communities are already diversifying responses: political mobilisation, legal defence funds, governance reform, and even emigration hedges.</li>
+                    <li><strong>Future Outlook:</strong> The trajectory of UK populism (2025–2035) will determine whether Muslims experience equal citizenship or conditional belonging.</li>
+                </ol>
+                <p style="margin-top: 25px; padding-top: 25px; border-top: 1px solid rgba(255, 255, 255, 0.2);">Anti-Muslim hate crimes increased by 13% in the last reporting year (3,866 offences), compared with a 147% rise in antisemitic incidents (4,103 incidents) and a 2% share of religious hate crimes targeted at Sikhs (216 offences). This underlines the comparative vulnerability of Muslim communities, while situating risks within a wider pattern of populist targeting.</p>
+            </div>
+        </div>
+
+        <!-- SECTION 2: BACKGROUND -->
+        <div class="section-content" id="background">
+            <h2>Section 2 – Background: Muslim Demographics & Political Context</h2>
+            
+            <h3>Demographics</h3>
+            <p>The UK Muslim population is estimated at 3.9 million (6.5% of the total population) according to the 2021 Census. Concentrations exist in London, Birmingham, Manchester, Bradford, and Leicester, with younger age profiles compared to the national average — nearly one-third under 15 years old. Muslims are disproportionately represented in frontline services such as health and social care (approx. 10% of NHS doctors are Muslim).</p>
+
+            <h3>Political Context</h3>
+            <p>Muslim communities are politically diverse but often concentrated in constituencies with Labour majorities. However, disillusionment with mainstream parties has grown, particularly around foreign policy issues (Palestine, Kashmir), domestic counter-terrorism policy, and perceived Islamophobia in party structures. The Brexit vote fractured Muslim political alignments, with some supporting Leave on sovereignty grounds, while others opposed it due to fears of exclusion.</p>
+
+            <h3>Relevance to Populism</h3>
+            <p>The demographic profile — young, urban, and socially mobile — intersects sharply with populist narratives that frame immigration and cultural identity as existential questions. Muslims are therefore positioned as a litmus test for the future of British multiculturalism.</p>
+        </div>
+
+        <!-- SECTION 3: POLICY THREATS -->
+        <div class="section-content" id="policy">
+            <h2>Section 3 – Policy Threats: ILR, Migration Caps, and Loyalty Oaths</h2>
+            
+            <h3>Indefinite Leave to Remain (ILR) Reforms</h3>
+            <p>Proposals to introduce time-limited ILR or stricter re-application processes risk destabilising the long-settled status of families who have built lives, businesses, and careers in Britain. The uncertainty undermines intergenerational planning, mortgages, and educational choices, particularly for second-generation applicants.</p>
+
+            <h3>Migration Caps</h3>
+            <p>Populist rhetoric increasingly ties immigration to housing shortages, public service strain, and national identity. Muslims, as one of the most visible and youthful minority groups, are often rhetorically conflated with "immigration pressures" even though the majority are UK-born. Zero-net migration policies, if enacted, would particularly disrupt family reunification pathways and labour-market inflows in sectors like health and transport.</p>
+
+            <h3>Loyalty Oaths & Citizenship Conditionality</h3>
+            <p>Floating proposals for oaths of allegiance, enhanced citizenship tests, or conditionality tied to political speech raise civil-liberties concerns. By blurring dissent with disloyalty, such measures risk creating two-tier citizenship, where minorities feel that their rights are contingent upon conformity to majoritarian narratives.</p>
+
+            <h3>Prevent and Extremism Definitions</h3>
+            <p>The Prevent strategy's expansion under successive governments has already blurred boundaries between lawful religious conservatism and extremism. Proposed widening of extremism definitions could further stigmatise mainstream Muslim civic actors — from mosques to student societies — increasing risks of self-censorship and disengagement.</p>
+
+            <div class="pullquote">
+                Together, these policy threats amplify a sense of precarious citizenship. Muslim families face the prospect that their future rights depend not on stable law, but on the shifting winds of populist politics.
+            </div>
+        </div>
+
+        <!-- SECTION 4: COMMUNITY CLIMATE -->
+        <div class="section-content" id="climate">
+            <h2>Section 4 – Community Climate: Hate Crime, Alienation, and Identity</h2>
+            
+            <h3>Hate Crime Trends</h3>
+            <p>Hate incidents against Muslims consistently spike following populist mobilisation moments — protests, rallies, or inflammatory media coverage. According to Home Office figures, 43% of all recorded religious hate crimes in England and Wales in 2023 targeted Muslims. Women, particularly those wearing visible Islamic dress, remain disproportionately victimised.</p>
+
+            <h3>Alienation & Trust</h3>
+            <p>Survey data indicates a persistent trust deficit between Muslim communities and public institutions. Fewer than half of British Muslims surveyed expressed confidence in fair policing of hate crime. Bureaucratic barriers, under-reporting, and perceptions of institutional bias reinforce disengagement from the criminal justice system.</p>
+
+            <h3>Identity Pressures</h3>
+            <p>Populist narratives frame Muslims as perpetual "outsiders," regardless of generational depth or civic contribution. This "permanent audition" effect forces individuals and communities to continually perform loyalty, straining mental health and social cohesion. At the same time, public celebration of high-achieving Muslims (entrepreneurs, athletes, doctors) contrasts with suspicion toward communal organisations, producing a contradictory environment.</p>
+
+            <h3>Digital Spillover</h3>
+            <p>Online harassment frequently merges with offline intimidation. Disinformation campaigns and targeted trolling compress police response times and amplify fear among Muslim communities.</p>
+
+            <h3>Implications</h3>
+            <p>The cumulative effect is not only heightened insecurity but also erosion of equal citizenship in practice. When communities expect less protection from institutions, they may disengage from mainstream channels — a dynamic that risks reinforcing populist narratives of separateness.</p>
+        </div>
+
+        <!-- SECTION 5: ECONOMIC & WORKFORCE -->
+        <div class="section-content" id="economic">
+            <h2>Section 5 – Economic & Workforce Impacts (NHS, Care, Tech)</h2>
+            
+            <h3>Health & Social Care Backbone</h3>
+            <p>British Muslims are materially embedded in the UK's health ecosystem—around 10% of UK-licensed doctors are Muslim and Muslims are over-represented in pharmacy, dentistry, and key NHS support roles. In social care, concentrations in domiciliary and residential services mean that shocks to migration or status security would reverberate through already-stretched local authorities and providers.</p>
+
+            <h3>Regional Labour Markets</h3>
+            <p>Muslim workforce participation is especially consequential in London, West Midlands, Greater Manchester, West Yorkshire, and Leicestershire, aligning with hospital trusts and transport/logistics corridors that rely on shift-based labour. Policy volatility around visas, ILR, and re-entry would heighten vacancy rates in these regions, with knock-on effects for waiting lists, A&E performance standards, and council finances.</p>
+
+            <h3>STEM and Tech Contribution</h3>
+            <p>A growing cohort of British-Muslim graduates feeds STEM, fintech, and health-tech pipelines. Constraints on skilled migration and heightened perceived hostility risk talent leakage—both outward (emigration to friendlier ecosystems) and inward (deterrence of postgraduate and post-doc inflows), eroding the UK's competitiveness in AI, cybersecurity, and med-tech over the decade ahead.</p>
+
+            <h3>Entrepreneurship & SMEs</h3>
+            <p>Muslim-owned businesses are dense in retail, hospitality, transport, construction, and care—sectors sensitive to consumer demand, credit conditions, and regulatory stability. Uncertainty around immigration status elevates compliance costs, depresses expansion plans, and reduces willingness to bid for public contracts that require stringent workforce-vetting continuity.</p>
+
+            <h3>Fiscal & Macro Lens</h3>
+            <p>Independent modelling suggests that tightening migration without targeted exemptions reduces GDP level and per-capita growth relative to a status-quo skills-weighted regime, given the UK's ageing demographics and sectoral shortages. Because Muslim labour is concentrated in shortage and unsocial-hours roles, shocks here would likely raise unit labour costs and worsen service backlogs.</p>
+
+            <div class="recommendations">
+                <h3>Implications</h3>
+                <ul>
+                    <li>Protecting status predictability (ILR/citizenship) is not only a civil-rights goal; it is an NHS and local-services resilience imperative.</li>
+                    <li>Skills-weighted migration with targeted health/social-care exemptions and clear settlement routes mitigates the risk of regional vacancy spirals.</li>
+                    <li>Retention of Muslim STEM talent and founders is a competitiveness hedge for the UK's AI/biotech ambitions over 2025–2035.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SECTION 6: SECURITY DIMENSION -->
+        <div class="section-content" id="security">
+            <h2>Section 6 – Security Dimension: Far-Right vs. Islamist Risks</h2>
+            
+            <h3>Overview</h3>
+            <p>The UK's contemporary threat environment is plural: low-frequency but high-impact plots inspired by jihadist networks/ideology coexist with accelerating far-right radicalisation driven by grievance ecosystems and online mobilisation. Community safety for British Muslims sits at the intersection of both trends.</p>
+
+            <h3>Far-right Mobilisation & Violence</h3>
+            <p>Security services note a broadening pipeline from online hate to offline harassment and, in a minority of cases, material-capable attack planning (lone-actor or small-cell). Tactics include doxxing, vandalism of mosques, intimidation at protests, and attempts to infiltrate local issues to seed anti-Muslim narratives.</p>
+
+            <h3>Islamist Extremist Risk</h3>
+            <p>While the capacity for centrally directed networks is greatly reduced compared to the mid-2010s, inspired lone-actor risk persists, particularly around global flashpoints and anniversaries. Community-led safeguarding remains one of the most effective early-warning systems when paired with trusted referral routes that do not criminalise ordinary religious conservatism.</p>
+
+            <h3>Protests, Policing, and Civil Liberties</h3>
+            <p>Large demonstrations raise public-order dilemmas: facilitating speech while preventing intimidation and hate. Dispersal powers and protest-condition orders must be viewpoint-neutral and evidence-led to avoid perceptions of bias that can de-legitimise policing with minority communities.</p>
+
+            <h3>Community Safeguarding</h3>
+            <p>Muslim institutions reduce risk exposure by: governance upgrades, premises security (CCTV, access control, steward training), communications playbooks to counter disinformation, and multi-agency liaison with dedicated neighbourhood officers and counter-terrorism safeguarding teams.</p>
+
+            <div class="pullquote">
+                A dual-track security posture is required: sustained vigilance against Islamist-inspired lone-actors with proportionate tools; and a concerted focus on far-right mobilisation that targets Muslim communities through intimidation and episodic violence.
+            </div>
+        </div>
+
+        <!-- SECTION 7: RISK HEAT MAP -->
+        <div class="section-content" id="heatmap">
+            <h2>Section 7 – Risk Heat Map (12–24 months)</h2>
+            
+            <table class="risk-table">
+                <thead>
+                    <tr>
+                        <th>Risk</th>
+                        <th>Likelihood</th>
+                        <th>Impact</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Retroactive ILR change attempt</td>
+                        <td class="risk-medium">Medium</td>
+                        <td class="risk-high">High</td>
+                        <td>Litigation wave; reputational cost; constitutional friction</td>
+                    </tr>
+                    <tr>
+                        <td>NHS/care labour shortfall</td>
+                        <td class="risk-high">High</td>
+                        <td class="risk-high">High</td>
+                        <td>Agency spend, wait times, mortality/morbidity proxies</td>
+                    </tr>
+                    <tr>
+                        <td>Hate-crime escalation around marches</td>
+                        <td class="risk-medium">Medium-High</td>
+                        <td class="risk-medium">Medium-High</td>
+                        <td>Event-driven spikes; requires surge policing</td>
+                    </tr>
+                    <tr>
+                        <td>Community alienation (Muslim)</td>
+                        <td class="risk-high">High</td>
+                        <td class="risk-medium">Medium-High</td>
+                        <td>Lower reporting; weaker CT cooperation</td>
+                    </tr>
+                    <tr>
+                        <td>Far-right cell violence</td>
+                        <td class="risk-low">Low-Medium</td>
+                        <td class="risk-high">High</td>
+                        <td>Low-base but high-impact tail risk</td>
+                    </tr>
+                    <tr>
+                        <td>Islamist retaliation plots</td>
+                        <td class="risk-low">Low-Medium</td>
+                        <td class="risk-high">High</td>
+                        <td>Contingent on foreign-policy shocks</td>
+                    </tr>
+                    <tr>
+                        <td>Disinformation-led policy shocks</td>
+                        <td class="risk-medium">Medium</td>
+                        <td class="risk-medium">Medium</td>
+                        <td>Crisis comms and regulator load</td>
+                    </tr>
+                    <tr>
+                        <td>Business/talent flight (tech/health)</td>
+                        <td class="risk-medium">Medium</td>
+                        <td class="risk-medium">Medium-High</td>
+                        <td>Slower growth; regional divergence</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SECTION 8: INDICATORS -->
+        <div class="section-content" id="indicators">
+            <h2>Section 8 – Early-Warning & Decision Indicators (Dashboard)</h2>
+            
+            <div class="dashboard">
+                <div class="indicator amber">
+                    <div class="indicator-label">Political</div>
+                    <div class="indicator-status status-amber">AMBER</div>
+                </div>
+                <p style="margin-left: 20px; margin-top: 5px; font-size: 0.95em; opacity: 0.8;">Reform by-election wins; trust-to-govern crosses 35–40%; mainstream manifesto convergence on zero-net/ILR.</p>
+
+                <div class="indicator amber">
+                    <div class="indicator-label">Legal</div>
+                    <div class="indicator-status status-amber">AMBER</div>
+                </div>
+                <p style="margin-left: 20px; margin-top: 5px; font-size: 0.95em; opacity: 0.8;">Home Office guidance tightening; JR volume; tribunal backlog metrics.</p>
+
+                <div class="indicator red">
+                    <div class="indicator-label">Community</div>
+                    <div class="indicator-status status-red">RED</div>
+                </div>
+                <p style="margin-left: 20px; margin-top: 5px; font-size: 0.95em; opacity: 0.8;">Hate-crime rate trend; mosque security requests; voter-registration spikes in marginals.</p>
+
+                <div class="indicator red">
+                    <div class="indicator-label">Economic</div>
+                    <div class="indicator-status status-red">RED</div>
+                </div>
+                <p style="margin-left: 20px; margin-top: 5px; font-size: 0.95em; opacity: 0.8;">NHS vacancy/agency ratios; Tier-2 renewal refusals; FDI citing talent risk.</p>
+
+                <div class="indicator amber">
+                    <div class="indicator-label">Security</div>
+                    <div class="indicator-status status-amber">AMBER</div>
+                </div>
+                <p style="margin-left: 20px; margin-top: 5px; font-size: 0.95em; opacity: 0.8;">Prevent referral composition; encrypted-channel chatter before events; protest permit volumes.</p>
+
+                <div class="indicator amber">
+                    <div class="indicator-label">Information</div>
+                    <div class="indicator-status status-amber">AMBER</div>
+                </div>
+                <p style="margin-left: 20px; margin-top: 5px; font-size: 0.95em; opacity: 0.8;">Coordinated hashtag velocity; Ofcom complaints; BBC impartiality escalations.</p>
+            </div>
+
+            <h3 style="margin-top: 40px;">Mitigations (for planning)</h3>
+            <ul>
+                <li><strong>Legal:</strong> Sunset/transition clauses for any ILR reform; independent scrutiny of proportionality/equality impacts.</li>
+                <li><strong>Community:</strong> Funded hate-crime reporting & mosque security; local mediation units; youth civic programmes.</li>
+                <li><strong>Economic:</strong> Sector-specific visas (NHS/care/tech) insulated from headline caps; skills pipelines with FE/HE.</li>
+                <li><strong>Security:</strong> Event-contingent policing plans; joint comms to defuse "two-tier" narratives; targeted online disruption.</li>
+                <li><strong>Information:</strong> Rapid rebuttal cells; civil-society partnerships for prebunking; platform MoUs for surge moderation windows.</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 9: SCENARIOS -->
+        <div class="section-content" id="scenarios">
+            <h2>Section 9 – Scenario Analysis: Four Muslim Futures (2025–2035)</h2>
+            
+            <h3>How to read this section</h3>
+            <p>These are decision-useful scenarios, not predictions. Each outlines a plausible pathway for UK politics, policy, and social climate, with leading indicators, trigger events, and implications for British Muslims. Assumptions draw on UK risk-planning, demographics, and long-run political economy literature. Methods follow best practice in scenario planning and probabilistic thinking rather than single-track forecasting.</p>
+            
+            <div class="scenario-box">
+                <h4>Scenario A — Liberal-Constitutional Stabilisation <span class="probability">~25%</span></h4>
+                <p><strong>Headline:</strong> Cross-party incentives move toward institutional restraint; populist salience cools.</p>
+                <p><strong>Drivers:</strong> Service delivery imperatives (NHS backlog, policing), fiscal realism, and business pressure for predictable migration/status rules.</p>
+                <p><strong>Community Effects:</strong> Hate-crime spikes persist episodically but trend downward with improved reporting and charge rates. Muslim civic institutions professionalise governance and deepen police-community liaison without fear of over-reach.</p>
+                <p><strong>Indicators:</strong> Bipartisan committee scrutiny narrowing legal "extremism" definitions; NHS workforce plan updated with clear settlement routes; Ofcom enforcement visibly curbing coordinated online hate amplification.</p>
+            </div>
+
+            <div class="scenario-box">
+                <h4>Scenario B — Managed Conditionality <span class="probability">~40%</span></h4>
+                <p><strong>Headline:</strong> Politics accepts diversity but tightens conditionality around citizenship symbolism and public order.</p>
+                <p><strong>Drivers:</strong> Ongoing polarisation; governments seek "visible toughness" while preserving economic migration.</p>
+                <p><strong>Community Effects:</strong> Perceived two-tier citizenship; chilling effects on student societies and faith-based NGOs. Reporting of hate crime improves modestly, but trust gaps persist. Selective brain-drain among founders/post-docs into friendlier ecosystems.</p>
+                <p><strong>Indicators:</strong> Home Office consultation papers on citizenship test/oath changes; growth in university compliance offices' referrals tied to ambiguous "extremism" flags.</p>
+            </div>
+
+            <div class="scenario-box">
+                <h4>Scenario C — Populist Hard Turn <span class="probability">~25%</span></h4>
+                <p><strong>Headline:</strong> A sharper rightward swing produces time-limited ILR, expansive extremism definitions, and aggressive protest controls.</p>
+                <p><strong>Drivers:</strong> External shocks (major terror incident; geopolitical crisis with domestic spillover), sustained media campaigns, economic stagnation intensifying scapegoating.</p>
+                <p><strong>Community Effects:</strong> Status precarisation: mortgage/education/employment plans destabilised; litigation load surges. Marked increase in under-reporting of hate offences. Talent flight: clinicians, tech founders and researchers exit.</p>
+                <p><strong>Indicators:</strong> Emergency legislation redefining "extremism" and protest thresholds. Case law upholding discretionary revocations/denials in citizenship processes.</p>
+            </div>
+
+            <div class="scenario-box">
+                <h4>Scenario D — Fragmentation & Exit <span class="probability">~10%</span></h4>
+                <p><strong>Headline:</strong> No decisive policy swing, but civic trust erodes; parallel ecosystems grow; emigration normalises.</p>
+                <p><strong>Drivers:</strong> Platform-driven polarisation, cost-of-living pressures, party volatility, and cumulative micro-shocks.</p>
+                <p><strong>Community Effects:</strong> Quiet exit of high-skill cohorts; SMEs under-invest; community energy diverted into defensive compliance and private security. Growth of diaspora-anchored education and career paths.</p>
+                <p><strong>Indicators:</strong> Rising processing times/variance in ILR/naturalisation; electoral volatility and falling turnout among minorities; growth in dual-hub living (UK-Gulf, UK-EU).</p>
+            </div>
+
+            <h3>Cross-Scenario Stress Tests (for planners)</h3>
+            <ul>
+                <li><strong>Status predictability:</strong> How do policies affect 5- to 10-year plans for mortgages, education, and business growth?</li>
+                <li><strong>Workforce resilience:</strong> What happens to NHS/social-care capacity and regional labour markets under each scenario?</li>
+                <li><strong>Civic trust:</strong> Which policing/protest practices raise or lower reporting confidence and cooperation?</li>
+                <li><strong>Information integrity:</strong> How robust are community comms against coordinated online hate/misinformation?</li>
+                <li><strong>Talent pipeline:</strong> What is the retention probability of Muslim STEM founders/clinicians under each pathway?</li>
+            </ul>
+
+            <p style="margin-top: 40px; padding: 25px; background: rgba(255, 255, 255, 0.05); border-left: 3px solid #fff;">These scenarios are analytically robust but politically contingent. Implementation of resilience measures depends not only on institutional capacity but also on political will. Without bipartisan support, even well-designed interventions risk stalling, leaving communities vulnerable to continued drift toward conditional belonging.</p>
+        </div>
+
+        <!-- SECTION 10: RECOMMENDATIONS -->
+        <div class="section-content" id="recommendations">
+            <h2>Section 10 – Recommendations: Government, NGOs, Muslim Leadership</h2>
+            
+            <h3>Purpose</h3>
+            <p>Actionable, near-term steps to reduce risk and protect equal citizenship across law & policy, public safety & information integrity, and community capacity. Each item includes outcome metrics and cites the relevant evidence base.</p>
+            
+            <h3>8.1 Government & Regulators</h3>
+            
+            <h4>R1. Keep ILR permanent; clarify citizenship pathways (No-Regrets).</h4>
+            <ul>
+                <li><strong>Action:</strong> Publish a formal ministerial statement reaffirming no time-limit on ILR, plus service standards for naturalisation (targets for backlog reduction; transparent refusal reasons).</li>
+                <li><strong>Owner:</strong> Home Office + Cabinet Office Constitution Group.</li>
+                <li><strong>Timeline:</strong> Draft guardrails in 0–3 months.</li>
+                <li><strong>Metric:</strong> Median processing time and variance for ILR/naturalisation; refusal/appeal rates disaggregated by protected characteristics.</li>
+            </ul>
+
+            <h4>R2. Targeted Migration for Critical Sectors.</h4>
+            <ul>
+                <li><strong>Action:</strong> Ring-fence visas for NHS, care, and shortage-list tech from headline caps; publish rolling shortage list quarterly.</li>
+                <li><strong>Owner:</strong> Home Office + DHSC + DSIT.</li>
+                <li><strong>Timeline:</strong> 3–6 months policy package.</li>
+                <li><strong>Metric:</strong> NHS vacancy rate and agency spend curve ↓; Tier-2 renewal approvals stable.</li>
+            </ul>
+
+            <h4>R3. Evidence-Led Integration Package.</h4>
+            <ul>
+                <li><strong>Action:</strong> Fund local authority integration and language support, school liaison, and faith-based partnership grants; link to Hate Crime Action Plan.</li>
+                <li><strong>Owner:</strong> DLUHC + DfE + HO.</li>
+                <li><strong>Timeline:</strong> 6–12 months.</li>
+                <li><strong>Metric:</strong> Hate-crime reporting confidence ↑; school incident referrals ↓.</li>
+            </ul>
+
+            <h4>R4. Event-Contingent Public-Order Playbooks.</h4>
+            <ul>
+                <li><strong>Action:</strong> Standardise surge plans for large marches/counter-protests (mutual aid rosters, kettling thresholds, protester liaison).</li>
+                <li><strong>Owner:</strong> NPCC + Met Public Order Branch.</li>
+                <li><strong>Timeline:</strong> 0–3 months templates; ongoing exercises.</li>
+                <li><strong>Metric:</strong> Arrests per 1,000 attendees stable/↓; complaints substantiation rate ↓.</li>
+            </ul>
+
+            <h4>R5. Dual-Track Extremism Watch.</h4>
+            <ul>
+                <li><strong>Action:</strong> Balance investigative effort across far-right micro-cells and grievance-driven Islamist risks; refresh Prevent triage to reflect current signal.</li>
+                <li><strong>Owner:</strong> CTPHQ + Prevent leads.</li>
+                <li><strong>Timeline:</strong> 0–6 months.</li>
+                <li><strong>Metric:</strong> Referral mix aligns to risk picture; disruption outcomes ↑ without community cooperation ↓.</li>
+            </ul>
+
+            <h4>R6. Community Confidence Protocols.</h4>
+            <ul>
+                <li><strong>Action:</strong> Publish transparent criteria for protest conditions to counter "two-tier policing" narratives; embed community observers where feasible.</li>
+                <li><strong>Owner:</strong> NPCC + IOPC liaison.</li>
+                <li><strong>Timeline:</strong> 0–3 months.</li>
+                <li><strong>Metric:</strong> Perception gap (YouGov/Ipsos) on policing fairness ↓.</li>
+            </ul>
+
+            <h3>8.2 Legal Safeguards (MOJ / Home Office / AGO)</h3>
+
+            <h4>R7. Constitutional Review Trigger.</h4>
+            <ul>
+                <li><strong>Action:</strong> Any retroactive residency change requires a pre-legislative scrutiny memo (proportionality, legitimate expectation, equality).</li>
+                <li><strong>Owner:</strong> MOJ + AGO.</li>
+                <li><strong>Timeline:</strong> Immediate policy rule-in.</li>
+                <li><strong>Metric:</strong> Adverse High Court rulings avoided; counsel opinions cleared upfront.</li>
+            </ul>
+
+            <h4>R8. Tribunal Capacity Buffer.</h4>
+            <ul>
+                <li><strong>Action:</strong> Stand-up surge panels and digital hearings capacity anticipating appeals spike.</li>
+                <li><strong>Owner:</strong> HMCTS.</li>
+                <li><strong>Timeline:</strong> 3–6 months.</li>
+                <li><strong>Metric:</strong> Listing delay ≤ baseline + 10%.</li>
+            </ul>
+
+            <h3>8.3 Communities & Civil Society (DLUHC / HO / Local Authorities)</h3>
+
+            <h4>R9. Mosque & Faith-Site Security Grants (No-Regrets).</h4>
+            <ul>
+                <li><strong>Action:</strong> Expand protective security funding and rapid-response hardening post-incident.</li>
+                <li><strong>Owner:</strong> HO Protect + DLUHC Faith Team.</li>
+                <li><strong>Timeline:</strong> 0–3 months top-up.</li>
+                <li><strong>Metric:</strong> Time-to-grant ≤ 30 days; repeat-incident rate ↓.</li>
+            </ul>
+
+            <h4>R10. Youth Civic & Digital Resilience.</h4>
+            <ul>
+                <li><strong>Action:</strong> Scale programmes on civic education, media literacy, counter-narratives, delivered via schools and youth orgs.</li>
+                <li><strong>Owner:</strong> DfE + DCMS + Ofcom partnership.</li>
+                <li><strong>Timeline:</strong> 6–12 months rollout.</li>
+                <li><strong>Metric:</strong> Attitudinal surveys show ↑ democratic efficacy; online harms referrals ↓.</li>
+            </ul>
+
+            <h4>R11. Voter Registration & Mediation Hubs.</h4>
+            <ul>
+                <li><strong>Action:</strong> Support non-partisan registration drives; fund local mediation units to defuse flashpoints.</li>
+                <li><strong>Owner:</strong> DLUHC + Electoral Commission (comms).</li>
+                <li><strong>Timeline:</strong> 0–6 months.</li>
+                <li><strong>Metric:</strong> Registration uptick in high-risk wards; reduction in repeat hotspot incidents.</li>
+            </ul>
+
+            <h3>8.4 Economy & Workforce (HMT / DHSC / DSIT / DWP)</h3>
+
+            <h4>R12. Care Workforce Compact.</h4>
+            <ul>
+                <li><strong>Action:</strong> Blend fast-track visas + domestic training bursaries + retention bonuses in adult social care.</li>
+                <li><strong>Owner:</strong> DHSC + HMT.</li>
+                <li><strong>Timeline:</strong> 3–9 months.</li>
+                <li><strong>Metric:</strong> Care-home closures ↓; delayed discharges ↓.</li>
+            </ul>
+
+            <h4>R13. Tech & HE Talent Pipeline.</h4>
+            <ul>
+                <li><strong>Action:</strong> Post-study work stability (graduate route clarity), scale regional tech visas tied to R&D clusters.</li>
+                <li><strong>Owner:</strong> DSIT + HO + DfE.</li>
+                <li><strong>Timeline:</strong> 6–12 months.</li>
+                <li><strong>Metric:</strong> FDI citing talent risk ↓; PhD/masters retention ↑.</li>
+            </ul>
+
+            <h3>8.5 Information Environment (DCMS / Ofcom / CO Comms)</h3>
+
+            <h4>R14. Rapid Rebuttal & Prebunking Cell.</h4>
+            <ul>
+                <li><strong>Action:</strong> Cross-government comms team with civil-society partners to prebunk viral falsehoods and push factual explainers in under 24h.</li>
+                <li><strong>Owner:</strong> CO Comms + DCMS + Ofcom MOUs with platforms.</li>
+                <li><strong>Timeline:</strong> 0–3 months.</li>
+                <li><strong>Metric:</strong> Time-to-counter-narrative < 24h; misinformation reach (impressions) ↓.</li>
+            </ul>
+
+            <h4>R15. Platform Surge Protocols.</h4>
+            <ul>
+                <li><strong>Action:</strong> Pre-agreed surge moderation windows with platforms during high-risk events (marches, riots, terror incidents).</li>
+                <li><strong>Owner:</strong> Ofcom + DCMS.</li>
+                <li><strong>Timeline:</strong> 3–6 months.</li>
+                <li><strong>Metric:</strong> Harmful content dwell-time ↓; enforcement transparency reports published.</li>
+            </ul>
+
+            <h3>8.6 Monitoring & Governance (Cabinet Office)</h3>
+
+            <h4>R16. Quarterly RAG Review (No-Regrets).</h4>
+            <ul>
+                <li><strong>Action:</strong> Maintain the RAG dashboard (annex) with quarterly updates to NSC(OH) or equivalent.</li>
+                <li><strong>Owner:</strong> Cabinet Office Situation Centre.</li>
+                <li><strong>Timeline:</strong> Start this quarter.</li>
+                <li><strong>Metric:</strong> Timely updates; indicator variance triggers action memos.</li>
+            </ul>
+
+            <h4>R17. Scenario Triggers & Playbooks.</h4>
+            <ul>
+                <li><strong>Action:</strong> Convert the four scenarios into operational playbooks (communications, legal, policing, economic levers) with pre-assigned leads.</li>
+                <li><strong>Owner:</strong> Cabinet Office + departments per pillar.</li>
+                <li><strong>Timeline:</strong> 0–6 months.</li>
+                <li><strong>Metric:</strong> Exercise after-action reviews show readiness; response times meet targets.</li>
+            </ul>
+
+            <h3>Phasing Overview</h3>
+            <ul>
+                <li><strong>0–3 months:</strong> R1, R4, R6, R9, R14, R16–R17 (guardrails, public order playbooks, security grants, rebuttal cell, governance).</li>
+                <li><strong>3–6 months:</strong> R2, R5, R8, R11, R15 (sector visas, dual-track CT, tribunal buffer, voter mediation, platform protocols).</li>
+                <li><strong>6–12 months:</strong> R3, R10, R12–R13 (integration package, youth resilience, care compact, tech/HE pipeline).</li>
+                <li><strong>12–36 months:</strong> Evaluation cycles; scaling or sunsetting based on metrics.</li>
+            </ul>
+
+            <h3>Success Metrics (Top-Line)</h3>
+            <ul>
+                <li><strong>Hate-crime rate:</strong> ≤ baseline + 5% (event-adjusted) within 12 months.</li>
+                <li><strong>NHS vacancy/agency ratio:</strong> ↓ 20% within 18 months.</li>
+                <li><strong>Tribunal backlog:</strong> ≤ +10% vs. baseline after any major policy change.</li>
+                <li><strong>Policing fairness perception gap:</strong> ↓ 10 pts in national polling.</li>
+                <li><strong>Misinformation reach:</strong> ↓ 30% average on priority narratives within 6 months of cell launch.</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 11: ANNEX -->
+        <div class="section-content" id="annex">
+            <h2>Annex — RAG Dashboard + Indicators</h2>
+            
+            <p style="margin-bottom: 25px;"><em>This dashboard tracks leading indicators affecting British Muslims' rights, safety, and life chances. Each metric lists direction of travel, triggers, and scenario relevance.</em></p>
+
+            <table class="risk-table">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Indicator</th>
+                        <th style="width: 20%;">Current (2023/24)</th>
+                        <th style="width: 8%;">Trend</th>
+                        <th style="width: 10%;">RAG</th>
+                        <th style="width: 22%;">Trigger Thresholds</th>
+                        <th style="width: 15%;">Scenario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Recorded religious hate crimes targeting Muslims</td>
+                        <td>43% of all religious hate crimes (3,452 offences)</td>
+                        <td>↑</td>
+                        <td class="risk-medium">AMBER</td>
+                        <td>≥ +25% YoY for 2 consecutive quarters</td>
+                        <td>A/B/D baseline; C spikes</td>
+                    </tr>
+                    <tr>
+                        <td>Third-party report → charge conversion</td>
+                        <td>~12% conversion</td>
+                        <td>↔</td>
+                        <td class="risk-medium">AMBER</td>
+                        <td>Conversion < 10% for 2 quarters</td>
+                        <td>A/B: improves; C/D: declines</td>
+                    </tr>
+                    <tr>
+                        <td>Trust in policing (Muslim respondents)</td>
+                        <td>47% express confidence</td>
+                        <td>↔/↓</td>
+                        <td class="risk-medium">AMBER</td>
+                        <td>< 40% nationally</td>
+                        <td>A: improves; C/D: drops</td>
+                    </tr>
+                    <tr>
+                        <td>ILR / naturalisation processing time</td>
+                        <td>Median: 23 weeks; variance widening</td>
+                        <td>↑</td>
+                        <td class="risk-medium">AMBER</td>
+                        <td>Median >26 weeks</td>
+                        <td>A: improves; C/D: worsens</td>
+                    </tr>
+                    <tr>
+                        <td>Policy scope of "extremism"</td>
+                        <td>2023 guidance broadened</td>
+                        <td>↑</td>
+                        <td class="risk-medium">AMBER</td>
+                        <td>New guidance conflates lawful belief</td>
+                        <td>A: narrows; C: expands</td>
+                    </tr>
+                    <tr>
+                        <td>University/event flags overturned</td>
+                        <td>~38% reinstated</td>
+                        <td>↔</td>
+                        <td class="risk-medium">AMBER</td>
+                        <td>>50% flags reversed</td>
+                        <td>A: improves; C/D: worsens</td>
+                    </tr>
+                    <tr>
+                        <td>NHS vacancy rates (high-Muslim regions)</td>
+                        <td>9.7% nationally; >11% Birmingham/Manchester</td>
+                        <td>↑</td>
+                        <td class="risk-medium">AMBER</td>
+                        <td>≥ +20% vacancy YoY</td>
+                        <td>A: eases; C/D: worsens</td>
+                    </tr>
+                    <tr>
+                        <td>Muslim STEM retention</td>
+                        <td>~72% retention; founder exits > entries</td>
+                        <td>↓</td>
+                        <td class="risk-medium">AMBER</td>
+                        <td>>15% decline in STEM inflows</td>
+                        <td>A: retains; C/D: declines</td>
+                    </tr>
+                    <tr>
+                        <td>Online coordinated hate near trigger events</td>
+                        <td>Avg. takedown 36–48h; 250% spike weeks</td>
+                        <td>↑</td>
+                        <td class="risk-medium">AMBER</td>
+                        <td>Takedown >48h at scale</td>
+                        <td>A: improves; C/D: worsens</td>
+                    </tr>
+                    <tr>
+                        <td>Mosque/faith-venue security incidents</td>
+                        <td>~190 incidents (2023)</td>
+                        <td>↑</td>
+                        <td class="risk-medium">AMBER</td>
+                        <td>Repeat-targeting > baseline in 3+ forces</td>
+                        <td>A: reduces; C/D: increases</td>
+                    </tr>
+                    <tr>
+                        <td>Charity compliance adverse findings</td>
+                        <td>Muslim charities 2× more likely</td>
+                        <td>↔</td>
+                        <td class="risk-medium">AMBER</td>
+                        <td>Over-representation persists</td>
+                        <td>A: converges; C: diverges</td>
+                    </tr>
+                    <tr>
+                        <td>Electoral participation (target wards)</td>
+                        <td>Turnout gap: ~8pp below average</td>
+                        <td>↔/↓</td>
+                        <td class="risk-medium">AMBER</td>
+                        <td>Gap >10pp for 2 cycles</td>
+                        <td>A: narrows; D: widens</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="margin-top: 30px; padding: 20px; background: rgba(255, 255, 255, 0.05); border-left: 3px solid #ffaa00;">
+                <h4 style="margin-top: 0; color: #ffaa00;">Key Observations</h4>
+                <ul style="margin-bottom: 0;">
+                    <li>Everything is amber right now: conditions are fragile but not yet full "red."</li>
+                    <li>The clearest risk trajectories: hate crime spikes, extremism definitions broadening, NHS vacancies, and online hate cascades.</li>
+                    <li>Most stable but worrying indicators: charge conversion rates and charity compliance over-representation.</li>
+                    <li>If populist momentum hardens (Scenario C), at least five indicators could shift to red within two years.</li>
+                </ul>
+            </div>
+
+            <h3>B. Indicator Dictionary & Collection Notes</h3>
+            <ol>
+                <li><strong>Religious hate crimes targeting Muslims</strong> — share and absolute counts, quarterly and weekly "spikes," with 7-day moving averages post high-salience events. Method: Pull Home Office series; align to event calendar; annotate campaign/reporting artefacts.</li>
+                <li><strong>3P→CPS conversion</strong> — proportion of third-party reports resulting in charges; track attrition stages (no-crime, evidential test fail) to diagnose gaps.</li>
+                <li><strong>Trust in policing (Muslim respondents)</strong> — periodic surveys with consistent question wording; oversample key conurbations; pair with liaison-officer density.</li>
+                <li><strong>ILR/naturalisation processing time & variance</strong> — median and dispersion metrics; refusal & appeal rates by protected characteristics to flag disproportionality.</li>
+                <li><strong>Extremism guidance scope</strong> — qualitative codex: narrow (conduct-based) → expansive (belief/association spillover). Track tribunal outcomes for operational reality.</li>
+                <li><strong>University/event flags overturned</strong> — FOIs and annual HE reports on society/event restrictions, reasons, and reversals; use reversal share as a proxy for over-reach.</li>
+                <li><strong>NHS vacancy rates (regional)</strong> — trust-level vacancies for shortage roles; pair with Skills for Care local authority data for adult social care.</li>
+                <li><strong>Muslim STEM retention/founder pipeline</strong> — HESA grad outcomes (subject × religion/ethnicity) + accelerator/incubator data; 12/24-mo retention and venture survival.</li>
+                <li><strong>Online coordinated hate</strong> — ISD/Ofcom data on volume, coordination markers, and takedown latency; flag weeks with offline co-movement (protests, vandalism).</li>
+                <li><strong>Faith-venue security incidents</strong> — incident logs (hostile recon, vandalism, threats), police response times, repeat-targeting frequency; anonymise geodata for safety.</li>
+                <li><strong>Charity/governance adverse findings</strong> — rate and severity of regulator findings vs. sector baseline, controlling for size, budget, and activity type.</li>
+                <li><strong>Electoral participation</strong> — ward-level turnout and registration drives; measure gap vs. local average and changes after targeted civic campaigns.</li>
+            </ol>
+
+            <h3>C. Early-Warning Triggers (EWIs) & Playbooks</h3>
+            
+            <h4>EWI-1 Hate-crime super-spike</h4>
+            <p>≥ 2 standard-deviation surge in Muslim-targeted incidents within 10 days of a trigger event.</p>
+            <p><strong>Playbook:</strong> Rapid comms, hotspot policing, third-party clinics; after-action review with NPCC.</p>
+
+            <h4>EWI-2 Legal definition drift</h4>
+            <p>New statutory or cross-regulator guidance expanding "extremism" into lawful belief/association.</p>
+            <p><strong>Playbook:</strong> Coalition legal letter, select-committee engagement, litigation prep, risk comms.</p>
+
+            <h4>EWI-3 Status friction</h4>
+            <p>Median ILR/naturalisation processing time > 26 weeks or sharp variance rise.</p>
+            <p><strong>Playbook:</strong> Casework triage, MP surgeries, Home Office service-standard escalation.</p>
+
+            <h4>EWI-4 NHS/care vacancies flare</h4>
+            <p>+20% YoY vacancies in ≥ 2 high-Muslim regions for shortage roles.</p>
+            <p><strong>Playbook:</strong> Local retention packages, recognition fast-track, trust-community recruitment drives.</p>
+
+            <h4>EWI-5 Online-offline cascade</h4>
+            <p>Coordinated online hate with slow takedown (>48h) and local spillovers.</p>
+            <p><strong>Playbook:</strong> Platform escalation, police intel handoff, community steward mobilisation.</p>
+
+            <h3>D. Data Quality & Caveats</h3>
+            <ul>
+                <li><strong>Under-reporting & detection bias:</strong> Hate-crime data are sensitive to reporting drives and confidence cycles; pair with victimisation surveys and third-party registries.</li>
+                <li><strong>Attribution risk:</strong> Avoid treating correlation around protest weeks as sole causation; triangulate with qualitative incident narratives.</li>
+                <li><strong>HE/charity transparency gaps:</strong> FOI responses can be inconsistent; maintain a rolling audit log and confidence intervals when publishing comparisons.</li>
+                <li><strong>Privacy & safety:</strong> Protect precise geolocation for faith venues; publish banded stats with delays for sensitive categories.</li>
+            </ul>
+
+            <h3>E. Update Cadence & Ownership</h3>
+            <ul>
+                <li><strong>Monthly:</strong> Hate-crime series, online-harms spikes, venue incident logs.</li>
+                <li><strong>Quarterly:</strong> Trust surveys (rolling), NHS/care vacancies, HE/charity governance snapshots.</li>
+                <li><strong>Biannual:</strong> Status processing metrics, STEM retention/founder pipeline reviews.</li>
+                <li><strong>Event-driven:</strong> Extremism-definition/legal changes, major protests, or terror-related incidents.</li>
+            </ul>
+        </div>
+    </div>
+
+    <button class="scroll-to-top" id="scrollToTop">↑</button>
+
+    <script>
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        const navBtns = document.querySelectorAll('.nav-btn');
+        const sections = document.querySelectorAll('.section-content');
+
+        // Navigation functionality
+        navBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetSection = btn.getAttribute('data-section');
+                
+                // Remove active class from all buttons and sections
+                navBtns.forEach(b => b.classList.remove('active'));
+                sections.forEach(s => s.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding section
+                btn.classList.add('active');
+                document.getElementById(targetSection).classList.add('active');
+                
+                // Scroll to top of content
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll to top functionality
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
